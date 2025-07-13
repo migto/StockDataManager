@@ -1,0 +1,24 @@
+# 开发环境依赖
+# 首先安装基础依赖
+-r requirements.txt
+
+# 代码质量和格式化
+black>=21.0.0
+flake8>=3.9.0
+isort>=5.9.0
+mypy>=0.910
+
+# 测试相关
+pytest>=6.2.0
+pytest-cov>=2.12.0
+pytest-mock>=3.6.0
+coverage>=5.5.0
+
+# 文档生成
+sphinx>=4.0.0
+sphinx-rtd-theme>=0.5.0
+
+# 开发工具
+pre-commit>=2.13.0
+jupyter>=1.0.0
+ipython>=7.25.0 

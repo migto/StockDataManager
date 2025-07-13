@@ -1,0 +1,70 @@
+{
+  "report_time": "2025-07-14T00:02:25.415867",
+  "integrity_check": {
+    "stocks": {
+      "null_fields": {
+        "ts_code": 0,
+        "symbol": 0,
+        "name": 0,
+        "list_date": 0
+      },
+      "invalid_date_format": 0,
+      "invalid_code_format": 2,
+      "total_records": 2
+    },
+    "daily_data": {
+      "null_fields": {
+        "ts_code": 0,
+        "trade_date": 0,
+        "open": 0,
+        "high": 0,
+        "low": 0,
+        "close": 0
+      },
+      "price_logic_errors": {
+        "negative_prices": 1,
+        "invalid_high_low": 1,
+        "invalid_open_range": 2,
+        "invalid_close_range": 1
+      },
+      "volume_errors": {
+        "negative_volume": 1,
+        "negative_amount": 0,
+        "zero_volume_with_price": 0
+      },
+      "total_records": 6
+    },
+    "relationships": {
+      "orphan_daily_data": 0,
+      "stocks_without_data": 0,
+      "orphan_download_status": 0
+    },
+    "logical_consistency": {
+      "data_before_listing": 0,
+      "future_data": 0,
+      "weekend_data": 0
+    }
+  },
+  "duplicate_check": {
+    "daily_data": {
+      "success": true,
+      "table": "daily_data",
+      "total_duplicates": 0,
+      "duplicates": []
+    },
+    "stocks": {
+      "success": true,
+      "table": "stocks",
+      "total_duplicates": 0,
+      "duplicates": []
+    }
+  },
+  "summary": {
+    "total_issues": 5,
+    "critical_issues": 5,
+    "warnings": 0,
+    "recommendations": [
+      "立即修复关键问题，如空值和无效价格数据"
+    ]
+  }
+}

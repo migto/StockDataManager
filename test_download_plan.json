@@ -1,0 +1,122 @@
+{
+  "success": true,
+  "download_plan": {
+    "plan_id": "download_plan_20250714_001825",
+    "plan_type": "missing_days",
+    "creation_time": "2025-07-14T00:18:25.595438",
+    "config": {
+      "max_days": 10,
+      "batch_size": 100,
+      "enable_retry": true,
+      "max_retry_attempts": 3
+    },
+    "tasks": [
+      {
+        "task_id": 1,
+        "task_type": "download_daily_data",
+        "trading_date": "20250701",
+        "method": "batch_by_date",
+        "priority": "normal",
+        "status": "pending",
+        "retry_count": 0,
+        "estimated_stocks": 0
+      },
+      {
+        "task_id": 2,
+        "task_type": "download_daily_data",
+        "trading_date": "20250702",
+        "method": "batch_by_date",
+        "priority": "normal",
+        "status": "pending",
+        "retry_count": 0,
+        "estimated_stocks": 0
+      },
+      {
+        "task_id": 3,
+        "task_type": "download_daily_data",
+        "trading_date": "20250703",
+        "method": "batch_by_date",
+        "priority": "normal",
+        "status": "pending",
+        "retry_count": 0,
+        "estimated_stocks": 0
+      },
+      {
+        "task_id": 4,
+        "task_type": "download_daily_data",
+        "trading_date": "20250704",
+        "method": "batch_by_date",
+        "priority": "normal",
+        "status": "pending",
+        "retry_count": 0,
+        "estimated_stocks": 0
+      },
+      {
+        "task_id": 5,
+        "task_type": "download_daily_data",
+        "trading_date": "20250707",
+        "method": "batch_by_date",
+        "priority": "normal",
+        "status": "pending",
+        "retry_count": 0,
+        "estimated_stocks": 0
+      },
+      {
+        "task_id": 6,
+        "task_type": "download_daily_data",
+        "trading_date": "20250708",
+        "method": "batch_by_date",
+        "priority": "normal",
+        "status": "pending",
+        "retry_count": 0,
+        "estimated_stocks": 0
+      },
+      {
+        "task_id": 7,
+        "task_type": "download_daily_data",
+        "trading_date": "20250709",
+        "method": "batch_by_date",
+        "priority": "normal",
+        "status": "pending",
+        "retry_count": 0,
+        "estimated_stocks": 0
+      },
+      {
+        "task_id": 8,
+        "task_type": "download_daily_data",
+        "trading_date": "20250710",
+        "method": "batch_by_date",
+        "priority": "normal",
+        "status": "pending",
+        "retry_count": 0,
+        "estimated_stocks": 0
+      },
+      {
+        "task_id": 9,
+        "task_type": "download_daily_data",
+        "trading_date": "20250711",
+        "method": "batch_by_date",
+        "priority": "normal",
+        "status": "pending",
+        "retry_count": 0,
+        "estimated_stocks": 0
+      },
+      {
+        "task_id": 10,
+        "task_type": "download_daily_data",
+        "trading_date": "20250714",
+        "method": "batch_by_date",
+        "priority": "normal",
+        "status": "pending",
+        "retry_count": 0,
+        "estimated_stocks": 0
+      }
+    ],
+    "statistics": {
+      "total_tasks": 10,
+      "total_api_calls": 10,
+      "estimated_duration_minutes": 5.0,
+      "priority": "low"
+    }
+  }
+}

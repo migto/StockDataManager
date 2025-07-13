@@ -1,0 +1,68 @@
+{
+    "tushare": {
+        "token": "a3c869c34d4f150270b80d307a57a4e20fa9d665c99742aa39edf41f",
+        "api_url": "http://api.tushare.pro",
+        "timeout": 30,
+        "retry_count": 3,
+        "retry_delay": 1
+    },
+    "database": {
+        "path": "data/stock_data.db",
+        "backup_path": "data/backups/",
+        "connection_timeout": 30,
+        "enable_foreign_keys": true,
+        "enable_wal_mode": true
+    },
+    "api_limits": {
+        "free_account": {
+            "total_points": 120,
+            "calls_per_minute": 2,
+            "calls_per_hour": 60,
+            "calls_per_day": 120
+        },
+        "interface_costs": {
+            "daily": 1,
+            "stock_basic": 1,
+            "trade_cal": 1
+        },
+        "rate_limit_buffer": 0.1,
+        "monitor_window_hours": 24
+    },
+    "download": {
+        "batch_size": 100,
+        "max_workers": 1,
+        "enable_incremental": true,
+        "auto_retry": true,
+        "max_retry_attempts": 3
+    },
+    "logging": {
+        "level": "INFO",
+        "file_path": "logs/stock_downloader.log",
+        "max_file_size": "10MB",
+        "backup_count": 5,
+        "format": "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+    },
+    "scheduler": {
+        "enabled": true,
+        "run_time": "09:00",
+        "timezone": "Asia/Shanghai",
+        "weekends_enabled": false,
+        "holidays_enabled": false
+    },
+    "notifications": {
+        "enabled": false,
+        "email": {
+            "smtp_server": "",
+            "smtp_port": 587,
+            "username": "",
+            "password": "",
+            "recipients": []
+        }
+    },
+    "system": {
+        "version": "1.0.0",
+        "debug_mode": false,
+        "performance_monitoring": true,
+        "data_validation": true
+    }
+}
