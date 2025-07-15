@@ -246,20 +246,38 @@ class StockBasicManager:
     def _save_to_database(self, stock_data: pd.DataFrame):
         """保存数据到数据库"""
         try:
-            conn = self.db_manager.connect()
-            # 清空现有数据
-            conn.execute("DELETE FROM stocks")
+            # 转换DataFrame为字典列表
+            data_list = []
+            for _, row in stock_data.iterrows():
+                data_dict = {
+                    'ts_code': row['ts_code'],
+                    'symbol': row['symbol'],
+                    'name': row['name'],
+                    'area': row.get('area'),
+                    'industry': row.get('industry'),
+                    'list_date': row.get('list_date'),
+                    'market': row.get('market'),
+                    'exchange': row.get('exchange'),
+                    'curr_type': row.get('curr_type'),
+                    'list_status': row.get('list_status'),
+                    'delist_date': row.get('delist_date')
+                }
+                data_list.append(data_dict)
             
-            # 插入新数据
-            stock_data.to_sql('stocks', conn, if_exists='append', index=False)
+            # 使用bulk_insert_or_update方法处理数据
+            affected_rows = self.db_manager.bulk_insert_or_update(
+                'stocks', 
+                data_list, 
+                ['ts_code']  # 冲突检测列
+            )
             
-            conn.commit()
-            conn.close()
-            
-            print(f"💾 已保存 {len(stock_data)} 条记录到数据库")
+            print(f"💾 已保存/更新 {affected_rows} 条记录到数据库")
             
         except Exception as e:
             print(f"❌ 保存数据库失败: {e}")
+            # 提供更详细的错误信息
+            import traceback
+            print(f"详细错误: {traceback.format_exc()}")
     
     def _update_stats(self, stock_data: pd.DataFrame):
         """更新统计信息"""
